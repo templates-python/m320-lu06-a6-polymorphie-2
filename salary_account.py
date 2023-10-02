@@ -1,2 +1,2 @@
-class SalaryAccount(...):
-    ...
+class SalaryAccount():
+    pass

@@ -1,2 +1,2 @@
-class AccountIndexException(...):
-   ...
+class AccountIndexException():
+   pass
