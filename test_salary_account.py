@@ -3,6 +3,7 @@ import pytest
 from salary_account import SalaryAccount
 from customer import Customer
 
+
 class TestSalaryAccount:
 
     @pytest.fixture
@@ -25,11 +26,11 @@ class TestSalaryAccount:
         assert bc.overdraw == 250
 
     def test_withdraw_salary_account_well(self, bc):
-        assert bc.is_withdraw_money(600.0) == True
+        assert bc.is_withdraw_money(600.0) is True
         assert bc.balance == 400.0
 
     def test_withdraw_salary_account_overdraw(self, bc):
-        assert bc.is_withdraw_money(1200.0) == True
+        assert bc.is_withdraw_money(1200.0) is True
         assert bc.balance == -200.0
 
     def test_withdraw_salary_account_empty(self, bc):
@@ -37,11 +38,11 @@ class TestSalaryAccount:
         assert bc.balance == -500
 
     def test_withdraw_salary_account_ugly(self, bc):
-        assert bc.is_withdraw_money(1501.0) == False
+        assert bc.is_withdraw_money(1501.0) is False
 
-    def test_bank_account_print(self,bc, capsys):
+    def test_bank_account_print(self, bc, capsys):
         bc.print()
         captured = capsys.readouterr()
-        assert captured.out == '------------------------------------------------\nKunde    : Ria\nKontotyp : Salary bank account\n\tSaldo: 1000.0\n\tZins : 4.5\n\tÜberzug: 500\n'
-
-
+        assert captured.out == \
+               '------------------------------------------------\nKunde    : Ria\n' \
+               'Kontotyp : Salary bank account\n\tSaldo: 1000.0\n\tZins : 4.5\n\tÜberzug: 500\n'
