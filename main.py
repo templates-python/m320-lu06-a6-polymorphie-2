@@ -28,7 +28,7 @@ if __name__ == '__main__':
         print(f'\tSaldo = " {account_2.balance}')
     else:
         print(f'\tFehler: Bezug ist zu hoch für Saldo von {account_2.balance}')
-    print("Aktuelles Vermögen: " + str(customer.current_assets))
+    print('Aktuelles Vermögen: ' + str(customer.current_assets))
     #----------------------------------------------------------------------------------------------
     print('\nvon jedem Konto noch einmal 400.0 beziehen')
     print(f'\tBezug von {account_1.type}')

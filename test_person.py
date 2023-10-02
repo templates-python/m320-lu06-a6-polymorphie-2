@@ -5,7 +5,7 @@ class TestPerson:
 
     @pytest.fixture
     def person(self):
-        return Person("Max", 2000)
+        return Person('Max', 2000)
 
     def test_person_init(self, person):
         assert person.name == 'Max'
