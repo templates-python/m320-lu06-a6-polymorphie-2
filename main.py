@@ -4,46 +4,25 @@ from salary_account import SalaryAccount
 
 
 if __name__ == '__main__':
-    customer        = Customer('Pia', 23)
-    customer.address = 'Hochdorf'
-    #
-    account_1       = BankAccount(customer, 1000.0, 1.25)
-    account_2       = SalaryAccount(customer, 1000.0, 2.25, 500.0)
+    # zuerst die benötigten Objekte erstellen.
+    # beide Konti mit Initialwert 1000 erzeugen. Der Überzug beträgt 500. Der Zins ist beliebig.
+    pass
     #
     print('Angaben zu Kunde')
-    print(f'\tName: {customer.name}\n\tAlter: {customer.age}\n\tAdresse: {customer.address}')
+    # print aller Kundendaten (Customer-Objekte)
+    pass
     print('Angaben zum den Konti')
-    for index in range(2):
-        print(f'\t {customer.take_bank_account(index).type}')
+    # print aller Konten
+    pass
     #-----------------------------------------------------------------------------------------------
     print('\nvon jedem Konto 750.0 beziehen')
-    print(f'\tBezug von {account_1.type}')
-    if account_1.is_withdraw_money(750):
-        print(f'\tSaldo = {account_1.balance}')
-    else:
-        print(f'\tFehler: Bezug ist zu hoch für Saldo von {account_1.balance}')
-
-    print(f'\tBezug von {account_2.type}')
-    if account_2.is_withdraw_money(750):
-        print(f'\tSaldo = " {account_2.balance}')
-    else:
-        print(f'\tFehler: Bezug ist zu hoch für Saldo von {account_2.balance}')
-    print('Aktuelles Vermögen: ' + str(customer.current_assets))
+    # von beiden Konten geldbeziehen und den Saldo ausgeben
+    pass
     #----------------------------------------------------------------------------------------------
     print('\nvon jedem Konto noch einmal 400.0 beziehen')
-    print(f'\tBezug von {account_1.type}')
-    if account_1.is_withdraw_money(400):
-        print(f'\tSaldo = " {account_1.balance}')
-    else:
-        print(f'\tFehler: Bezug ist zu hoch für Saldo von {account_1.balance}')
-
-    print(f'\tBezug von {account_2.type}')
-    if account_2.is_withdraw_money(400):
-        print(f'\tSaldo = {account_2.balance}')
-    else:
-        print(f'\tFehler: Bezug ist zu hoch für Saldo von {account_2.balance}')
-    print(f'Aktuelles Vermögen: {customer.current_assets}')
+    # Erneut Geld beziehen mit unterschiedlichen Auswirkungen
+    pass
     #-----------------------------------------------------------------------------------------------
     print('\nEnde Monat: 3000.- Lohn wird eingezahlt')
-    account_2.pay_in_money(3000.00)
-    print(f'Aktuelles Vermögen: {customer.current_assets}')
+    # Geld einzahlen und den Effekt prüfen.
+
