@@ -231,7 +231,7 @@
       "points": 1
     },
     {
-      "name": "test_bank_account_print",
+      "name": "test_salary_account_print",
       "setup": "sudo -H pip3 install -r requirements.txt",
       "run": "pytest -v  -k \"test_bank_account_print\"",
       "input": "",
