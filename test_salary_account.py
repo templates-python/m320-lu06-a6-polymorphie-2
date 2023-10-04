@@ -39,7 +39,7 @@ class TestSalaryAccount:
     def test_withdraw_salary_account_ugly(self, bc):
         assert bc.is_withdraw_money(1501.0) == False
 
-    def test_bank_account_print(self,bc, capsys):
+    def test_salary_account_print(self,bc, capsys):
         bc.print()
         captured = capsys.readouterr()
         assert captured.out == '------------------------------------------------\nKunde    : Ria\nKontotyp : Salary bank account\n\tSaldo: 1000.0\n\tZins : 4.5\n\tÜberzug: 500\n'
